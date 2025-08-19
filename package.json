@@ -4,13 +4,18 @@
   "description": "Projeto de estudos do curso.dev para aprender um projeto do início ao fim.",
   "main": "index.js",
   "scripts": {
-    "dev":"next dev"
+    "dev": "next dev",
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --write ."
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "next": "^13.1.6",
+    "next": "^15.4.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
   }
 }
