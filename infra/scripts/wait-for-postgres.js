@@ -1,5 +1,3 @@
-const { error } = require("node:console");
-
 const { exec } = require("node:child_process");
 
 function checkPostgres() {
