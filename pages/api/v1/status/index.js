@@ -19,7 +19,7 @@ async function status(request, response) {
   const databaseUsedConn = databaseUsedConnResult.rows[0].count;
 
   response.status(200).json({
-    update_at: updatedAt,
+    updated_at: updatedAt,
     dependencies: {
       database: {
         version: databaseVersion,
