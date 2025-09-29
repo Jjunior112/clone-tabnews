@@ -44,15 +44,23 @@ function DatabaseStatus() {
   });
 
   let databaseStatusText = "Carregando...";
+
   if (!isLoading && data) {
     databaseStatusText = data.dependencies.database;
   }
 
   return (
-    <div>
-      Versão: {databaseStatusText.version} <br />
-      Conexões usadas: {databaseStatusText.used_conn} <br />
-      Conexões máximas: {databaseStatusText.max_conn} <br />
-    </div>
+    <>
+      <h1>Database</h1>
+      {isLoading && !data ? (
+        <p>{databaseStatusText}</p>
+      ) : (
+        <div className={styles.databaseStatus}>
+          <p>Versão: {databaseStatusText.version}</p>
+          <p>Conexões usadas: {databaseStatusText.used_conn}</p>
+          <p>Conexões máximas: {databaseStatusText.max_conn}</p>
+        </div>
+      )}
+    </>
   );
 }
